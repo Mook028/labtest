@@ -38,10 +38,22 @@ Students must scan a QR code provided by the instructor to confirm that they are
 Students will fill in a short form that includes:
 
 - The topic covered in the previous class  
-- What they expect to learn in the current class  
-- Their mood before the class using a simple mood scale  
+- What they expect to learn in the current class
+-   
+### 3.4 Mood Scale
+Students will select their mood before the class using the following scale:
 
-### 3.4 End-of-Class Reflection
+| Score | Mood | Description |
+|------|------|-------------|
+| 1 | 😡 | Very negative |
+| 2 | 😟 | Negative |
+| 3 | 😐 | Neutral |
+| 4 | 🙂 | Positive |
+| 5 | 😄 | Very positive |
+
+This mood data will help instructors understand students' emotional state before the class starts.
+
+### 3.5 End-of-Class Reflection
 After the class finishes, students will press **Finish Class** in the application. The system will again ask them to scan the QR code and record their GPS location.
 
 Students will then write a short reflection about:
