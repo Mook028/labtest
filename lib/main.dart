@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'screens/home_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
-  runApp(const SmartClassApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  runApp(SmartClassApp());
 }
 
 class SmartClassApp extends StatelessWidget {
@@ -16,7 +20,9 @@ class SmartClassApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
         primaryColor: Colors.blue.shade600,
-        scaffoldBackgroundColor: const Color(0xFFF4F8FB), // Soft blue-grey background
+        scaffoldBackgroundColor: const Color(
+          0xFFF4F8FB,
+        ), // Soft blue-grey background
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.blue,
           primary: Colors.blue.shade600,

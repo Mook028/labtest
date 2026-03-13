@@ -23,36 +23,48 @@ class MoodSelector extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(24),
         boxShadow: [
           BoxShadow(
-            color: Colors.blue.withOpacity(0.05),
-            blurRadius: 10,
+            color: Colors.blue.shade100.withOpacity(0.3),
+            blurRadius: 15,
             spreadRadius: 2,
+            offset: const Offset(0, 5),
           ),
         ],
       ),
+      padding: const EdgeInsets.symmetric(vertical: 8),
       child: Column(
         children: List.generate(moodOptions.length, (index) {
           final mood = moodOptions[index];
           final isSelected = selectedIndex == index;
-          return ListTile(
-            contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 4),
-            leading: Text(mood['emoji']!, style: const TextStyle(fontSize: 28)),
-            title: Text(
-              mood['label']!,
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: isSelected ? FontWeight.bold : FontWeight.w500,
-                color: isSelected ? Theme.of(context).primaryColor : Colors.black87,
+          return Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+            child: ListTile(
+              contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 2),
+              leading: Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: isSelected ? Colors.blue.shade100.withOpacity(0.5) : Colors.transparent,
+                  shape: BoxShape.circle,
+                ),
+                child: Text(mood['emoji']!, style: const TextStyle(fontSize: 24)),
               ),
+              title: Text(
+                mood['label']!,
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
+                  color: isSelected ? Colors.blue.shade700 : Colors.black87,
+                ),
+              ),
+              trailing: isSelected
+                  ? Icon(Icons.check_circle_rounded, color: Colors.blue.shade600)
+                  : null,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+              tileColor: isSelected ? Colors.blue.shade50.withOpacity(0.3) : Colors.transparent,
+              onTap: () => onMoodSelected(index, mood['emoji']!),
             ),
-            trailing: isSelected
-                ? Icon(Icons.check_circle_rounded, color: Theme.of(context).primaryColor)
-                : null,
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-            tileColor: isSelected ? Colors.blue.shade50 : null,
-            onTap: () => onMoodSelected(index, mood['emoji']!),
           );
         }),
       ),

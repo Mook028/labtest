@@ -51,15 +51,8 @@ class QRScanScreen extends StatelessWidget {
                   ),
                 );
 
-                // Add to history list directly
-                historyData.insert(
-                  0,
-                  HistoryItem(
-                    date: 'March 13', // Example date
-                    moodEmoji: pendingMoodEmoji,
-                    topic: pendingTopic,
-                  ),
-                );
+                // The QR scan now doesn't add anything natively since it got bypassed/separated or handled by History.
+                // Normally this would parse the QR data and act upon it.
 
                 // Navigate back to home
                 Navigator.popUntil(context, (route) => route.isFirst);

@@ -1,12 +1,18 @@
 class HistoryItem {
   final String date;
   final String moodEmoji;
-  final String topic;
+  final String topic; // corresponds to expected topic
+  final String studentId;
+  final String name;
+  final String previousTopic;
 
   HistoryItem({
     required this.date,
     required this.moodEmoji,
     required this.topic,
+    this.studentId = '',
+    this.name = '',
+    this.previousTopic = '',
   });
 }
 
@@ -16,7 +22,3 @@ List<HistoryItem> historyData = [
   HistoryItem(date: 'March 10', moodEmoji: '🙂', topic: 'Basic Programming'),
   HistoryItem(date: 'March 8', moodEmoji: '😡', topic: 'Database Basics'),
 ];
-
-// Temporary storage for the check-in flow
-String pendingTopic = '';
-String pendingMoodEmoji = '😐';
