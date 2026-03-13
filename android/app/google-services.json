@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "931491036586",
+    "project_id": "labtestmobileapp-95a9f",
+    "storage_bucket": "labtestmobileapp-95a9f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:931491036586:android:0621c927befb9ea526bfd3",
+        "android_client_info": {
+          "package_name": "com.example.labtest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCKCwul2vauUheHxPr5iVmn00_mTztgRM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
