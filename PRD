@@ -1,0 +1,48 @@
+Product Requirement Document (PRD)
+Smart Class Check-in & Learning Reflection App
+
+1. Problem Statement
+In many classes, attendance is usually taken by calling names or signing a paper sheet. This method is not very efficient and it is difficult for instructors to confirm whether students are actually present in the classroom. Sometimes students may check in for their friends or leave the classroom after checking in.
+Another problem is that attendance systems usually only record whether a student is present or not. They do not encourage students to reflect on what they learned during the class.
+This project aims to create a simple mobile application that allows students to check in to class using their phone. The system will use GPS location and QR code scanning to help verify that students are actually in the classroom. The application will also ask students to write a short reflection about the class so they can think about what they learned.
+
+2. Target Users
+The main users of this application are university students who need to check in for class attendance. The application helps them check in quickly using their mobile phone.
+Instructors can also benefit from this system because it makes it easier to confirm student attendance and understand how students feel about the class.
+
+3. Feature List
+The application will include several main features.
+First, students will be able to check in before the class starts by pressing a check-in button. The system will record the student’s GPS location and the current time.
+Second, students must scan a QR code provided by the instructor to confirm their attendance in the class.
+Third, students will fill in a short form that includes:
+  What topic was covered in the previous class
+  What they expect to learn in the current class
+  Their mood before the class using a simple mood scale
+  After the class finishes, students will press Finish Class in the app. They will scan the QR code again and record their GPS location once more.
+  Students will also write a short reflection about:
+  What they learned during the class
+  Any feedback they want to give about the class or the instructor.
+
+4. User Flow
+The basic flow of using the application is simple.
+First, the student opens the application and presses the Check-in button. The system records the GPS location and asks the student to scan the class QR code.
+Next, the student fills in the check-in form, including the previous topic, expected topic, and their mood before the class.
+At the end of the class, the student opens the app again and presses Finish Class. The student scans the QR code again and fills in a short reflection about what they learned and their feedback.
+
+5. Data Fields
+The application will store several pieces of information including:
+Student ID
+  Timestamp of check-in and check-out
+  GPS location
+  Previous class topic
+  Expected topic for the current class
+  Student mood before class
+  What the student learned during the class
+  Feedback about the class
+
+6. Technology Stack
+The mobile application will be developed using Flutter.
+For the MVP version, student data will be stored using local storage or SQLite.
+Firebase will be used for hosting or deployment, especially for the web version of the application.
+
+
